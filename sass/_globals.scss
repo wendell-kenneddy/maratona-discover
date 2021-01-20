@@ -1,0 +1,40 @@
+/*Globals ==============================*/
+
+:root {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: $grayish-black;
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  margin: 3.2rem 0 0.8rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+hr {
+  background-color: $red;
+  border: none;
+  width: 100%;
+  height: 0.1rem;
+}
+
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
