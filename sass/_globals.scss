@@ -50,3 +50,20 @@ hr {
   width: min(90vw, 800px);
   margin: auto;
 }
+
+/*Links & Buttons ==============================*/
+
+a {
+  color: $green;
+  text-decoration: none;
+  transition: .2s ease-in-out;
+
+  &:hover {
+    color: $light-green;
+  }
+}
+
+ .button.new {
+   display: inline-block;
+   margin-bottom: .8rem;
+ }
