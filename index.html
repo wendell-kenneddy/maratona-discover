@@ -30,7 +30,9 @@
       <div class="card">
           <h3>
             <span>Entradas</span>
-            <img src="./assets/income.svg" alt="Imagem de Entradas">
+            <img
+             src="./assets/income.svg"
+              alt="Imagem de Entradas">
           </h3>
         <p>R$ 5.000,00</p>
       </div>
@@ -38,23 +40,30 @@
       <div class="card expense">
         <h3>
           <span>Saídas</span>
-          <img src="./assets/expense.svg" alt="Imagem de Saídas">
+          <img
+           src="./assets/expense.svg" 
+           alt="Imagem de Saídas">
         </h3>
-        <p>R$ 2.000,00</p>
+        <p>R$ 700,00</p>
       </div>
 
       <div class="card total">
         <h3>
           <span>Total</span>
-          <img src="./assets/total.svg" alt="Imagem do Total">
+          <img 
+            src="./assets/total.svg"
+            alt="Imagem do Total">
         </h3>
-        <p>R$ 3.000,00</p>
+        <p>R$ 4.300,00</p>
       </div>
     </section>
     <section id="transactions">
       <h2 class="sr-only">Transações</h2>
 
-      <a href="#" class="button new">+ Nova Transação</a>
+      <a
+       onclick="modal.open()"
+       href="#" 
+       class="button new">+ Nova Transação</a>
 
       <table id="data-table">
         <thead>
@@ -91,7 +100,54 @@
 
   <div class="modal-overlay">
     <div class="modal">
+      <div class="form">
+        <h2>Nova Transação</h2>
+        <form action="" id="new-transaction">
+          
+          <div class="input-group">
+            <label for="description" class="sr-only">Descrição</label>
+            <input 
+            type="text"
+            id="description"
+            name="description"
+            placeholder="Descrição"
+            title="Descreva sua transação"
+            >
+          </div>
 
+          <div class="input-group">
+            <label for="amount" class="sr-only">Valor</label>
+            <input 
+            type="number"
+            step="0.1"
+            id="amount"
+            name="amount"
+            pattern="[0-9]"
+            placeholder="0,00"
+            title="Insira o valor desejado"
+            >
+
+            <small class="help">Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais.</small>
+          </div>
+
+          <div class="input-group">
+            <label for="date" class="sr-only">Data da transação</label>
+            <input 
+            type="date"
+            id="date"
+            name="date"
+            title="Defina a data da transação"
+            >
+          </div>
+
+          <div class="input-group actions">
+            <a href="#"
+            onclick="modal.close()" 
+            class="button cancel">Cancelar</a>
+            <button type="submit" form="new-transaction" value="Confirm">Confirmar</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 
