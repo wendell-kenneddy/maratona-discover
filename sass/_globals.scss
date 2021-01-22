@@ -67,3 +67,39 @@ a {
    display: inline-block;
    margin-bottom: .8rem;
  }
+
+ .input-group .button.cancel {
+   border: 2px solid $red;
+   border-radius: 0.2rem;
+   height: 50px;
+   opacity: 0.6;
+   cursor: pointer;
+
+   color: $red;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   &:hover {
+     opacity: 1;
+   }
+ }
+
+ .input-group button {
+   background: $light-green;
+   border: none;
+   border-radius: 0.2rem;
+   padding: 0rem;
+   height: 50px;
+   transition: .3s ease-in-out;
+   cursor: pointer;
+
+   color: #fff;
+
+   &:hover {
+     background-color: $green;
+   }
+ }
+
+ 
