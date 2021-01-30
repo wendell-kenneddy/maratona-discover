@@ -20,30 +20,18 @@ const modal = {
   }
 }
 
-const transactions = [
-  {
-    id: 0,
-    description: "Website Creation",
-    amount: 500000,
-    date: "08/10/2020"
+const Storage = {
+  get() {
+    return JSON.parse(localStorage.getItem("devfinances: transactions")) || []
   },
-  {
-    id: 1,
-    description: "Internet",
-    amount: -23000,
-    date: "20/01/2021"
-  },
-  {
-    id: 2,
-    description: "Luz",
-    amount: -5000000,
-    date: "20/01/2021"
-  }
-]
 
-//Calculate the incomes, expenses and the total 
+  set(transactions) {
+    localStorage.setItem("devfinances: transactions", JSON.stringify(transactions))
+  }
+}
+
 const calculateTransactions = {
-  all: transactions,
+  all: Storage.get(),
 
   //Add a new transaction
   add(transaction) {
@@ -52,6 +40,7 @@ const calculateTransactions = {
     App.reload()
   },
 
+  //Remove a transaction
   remove(index) {
     this.all.splice(index, 1)
 
@@ -94,18 +83,19 @@ const manipulateDOM = {
 
   transactionsContainer: document.querySelector("#data-table tbody"),
 
-  addTransaction(transaction) {
+  addTransaction(transaction, index) {
 
     //Create a tr
     const createTr = document.createElement("tr")
-    createTr.innerHTML = manipulateDOM.innerHTMLTransaction(transaction)
+    createTr.innerHTML = manipulateDOM.innerHTMLTransaction(transaction, index)
+    createTr.dataset.index = index
 
     //Append the tr to the data-table body
     manipulateDOM.transactionsContainer.appendChild(createTr)
   },
 
   //Add transaction data to HTML document
-  innerHTMLTransaction(transaction) {
+  innerHTMLTransaction(transaction, index) {
     const cssClass = transaction.amount > 0 ? "income" : "expense"
 
     const amount = Utils.formatCurrency(transaction.amount)
@@ -114,24 +104,26 @@ const manipulateDOM = {
     <td class="description">${transaction.description}</td>
     <td class="${cssClass}">${amount}</td>
     <td class="date">${transaction.date}</td>
-    <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
+    <td><img onclick="calculateTransactions.remove(${index})" src="./assets/minus.svg" alt="Remover Transação"></td>
     `
 
     return html;
   },
 
+  //Update balance values
   updateBalance() {
     document
-        .getElementById('incomeDisplay')
-        .innerHTML = Utils.formatCurrency(calculateTransactions.incomes())
+      .getElementById('incomeDisplay')
+      .innerHTML = Utils.formatCurrency(calculateTransactions.incomes())
     document
-        .getElementById('expenseDisplay')
-        .innerHTML = Utils.formatCurrency(calculateTransactions.expenses())
+      .getElementById('expenseDisplay')
+      .innerHTML = Utils.formatCurrency(calculateTransactions.expenses())
     document
-        .getElementById('totalDisplay')
-        .innerHTML = Utils.formatCurrency(calculateTransactions.total())
+      .getElementById('totalDisplay')
+      .innerHTML = Utils.formatCurrency(calculateTransactions.total())
   },
 
+  //Clear table content
   clearTransactions() {
     manipulateDOM.transactionsContainer.innerHTML = ""
   }
@@ -139,6 +131,7 @@ const manipulateDOM = {
 }
 
 const Utils = {
+
   formatCurrency(value) {
     const signal = Number(value) < 0 ? "-" : ""
 
@@ -153,21 +146,103 @@ const Utils = {
     )
 
     return signal + value
+  },
+
+  //Format input given amount 
+  formatAmout(value) {
+    value = Number(value.replace(/\,\./g, "")) * 100
+
+    return value
+  },
+
+  //Format input date from yyy/mm/dd to dd/mm/yyyy
+  formatDate(date) {
+    const splittedDate = date.split('-')
+
+    return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+  }
+}
+
+const Form = {
+  description: document.querySelector("input#description"),
+  amount: document.querySelector("input#amount"),
+  date: document.querySelector("input#date"),
+
+  getInputData() {
+    return {
+      description: this.description.value,
+      amount: this.amount.value,
+      date: this.date.value
+    }
+  },
+
+  //Check if all the fields were fulfilled
+  validateFields() {
+    const { description, amount, date } = this.getInputData()
+
+    if (description.trim() === "" ||
+      amount.trim() === "" ||
+      date.trim() === "") {
+      throw new Error("Por favor, preencha todos os campos")
+    }
+  },
+
+  //Format input data
+  formatData() {
+    let { description, amount, date } = this.getInputData()
+
+    amount = Utils.formatAmout(amount)
+
+    date = Utils.formatDate(date)
+
+    return {
+      description,
+      amount,
+      date
+    }
+  },
+
+  clearFormFields() {
+    this.description.value = ""
+    this.amount.value = ""
+    this.date.value = ""
+  },
+
+  //Events to try when submitting the form
+  submit(event) {
+    event.preventDefault()
+
+    try {
+      //Validate data
+      this.validateFields()
+      //Format data
+      const transaction = this.formatData()
+      //Save data and push to table
+      calculateTransactions.add(transaction)
+      //Clear form fields
+      this.clearFormFields()
+      modal.close()
+    }
+    catch (error) {
+      alert(error.message)
+    }
+
   }
 }
 
 const App = {
   init() {
-      calculateTransactions.all.forEach(transaction => {
-        manipulateDOM.addTransaction(transaction)
-      })
+    calculateTransactions.all.forEach(manipulateDOM.addTransaction)
 
-      DOM.updateBalance()
+    manipulateDOM.updateBalance()
+
+    Storage.set(calculateTransactions.all)
   },
-  
+
   reload() {
-      manipulateDOM.clearTransactions()
-      App.init()
+    manipulateDOM.clearTransactions()
+
+    App.init()
   },
 }
 
