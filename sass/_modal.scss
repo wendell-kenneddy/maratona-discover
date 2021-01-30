@@ -12,6 +12,7 @@
 
   opacity: 0;
   visibility: hidden;
+  z-index: 15
 }
 
 .modal-overlay.active {
@@ -22,4 +23,5 @@
 .modal {
   background-color: $light-black;
   padding: 2.4rem;
+  z-index: 15;
 }
