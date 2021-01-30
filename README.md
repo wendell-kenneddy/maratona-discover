@@ -1,3 +1,3 @@
 # Aplicação desenvolvida durante a Maratona Discover da Rocketseat. 
 
-[dev.finance$](https://wendell-kenneddy.github.io/dev-finances/)
+[dev.finance$](https://devfinances-three.vercel.app/)
