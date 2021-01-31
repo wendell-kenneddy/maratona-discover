@@ -150,9 +150,9 @@ const Utils = {
 
   //Format input given amount 
   formatAmout(value) {
-    value = Number(value.replace(/\,\./g, "")) * 100
+    value = Number(value) * 100
 
-    return value
+    return Math.round(value)
   },
 
   //Format input date from yyy/mm/dd to dd/mm/yyyy
