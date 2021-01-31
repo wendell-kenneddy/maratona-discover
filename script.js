@@ -6,17 +6,7 @@ const modal = {
     document
       .querySelector('.modal-overlay')
       .classList
-      .add('active')
-  },
-
-  close() {
-    //Close modal
-    //Remove the active class of the modal
-
-    document
-      .querySelector('.modal-overlay')
-      .classList
-      .remove('active')
+      .toggle('active')
   }
 }
 
@@ -221,7 +211,7 @@ const Form = {
       calculateTransactions.add(transaction)
       //Clear form fields
       this.clearFormFields()
-      modal.close()
+      modal.open()
     }
     catch (error) {
       alert(error.message)
