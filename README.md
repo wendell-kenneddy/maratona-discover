@@ -1,30 +1,37 @@
-<h1>
-  <img src="./assets/logo.svg" style="display: block; margin: auto;"></img>
-</h1>
+# ![Screenshot da aplicação no desktop](./assets/logo.svg)
 
-<h4 align="center">Uma aplicação para te auxiliar a gerenciar seu balanço bancário. O projeto foi desenvolvido durante a Maratona Discover, disponibilizada gratuitamente pela Rocketseat.</h4>
+![Autor](https://img.shields.io/badge/author-Wendell%20Kenneddy-brightgreen)
+![Tecnologias Utilizadas](https://img.shields.io/badge/techs-HTML%2C%20SCSS%2C%20JS-brightgreen)
+![Pull Requests são aceitos](https://img.shields.io/badge/PRs-welcome-brightgreen)
+![Projeto em construção](https://img.shields.io/badge/status-em%20construção-orange)
+![Licença: MIT](https://img.shields.io/github/license/wendell-kenneddy/agency-dev)
 
-![](https://img.shields.io/badge/platform-web-brightgreen)
-![](https://img.shields.io/badge/PRs-welcome-brightgreen)
-![](https://img.shields.io/badge/status-em%20construção-orange)
-![](https://img.shields.io/github/license/wendell-kenneddy/agency-dev)
-
-<img src="./assets/dev-finances-desktop-scrshot.png" style="display: block; margin: auto;"></img>
+![Screenshot da aplicação no desktop](./assets/dev-finances-desktop-scrshot.png)
 
 ---
 
 ## :bookmark_tabs: Tabela de Conteúdo
-- [Tecnologias Utilizadas](#hammer-tecnologias-utilizadas)
-- [Features](#sparkles-features)
-    - [A ser adicionado](#calendar-a-ser-adicionado)
-- [Seja um Contribuidor](#handshake-seja-um-contribuidor)
-- [Screenshots da Aplicação](#camera-screenshots-da-aplicação)
-- [Licença](#books-licença)
+
+- [:closed_book: Sobre](#closed_book-sobre)
+- [:hammer_and_pick: Tecnologias Utilizadas](#hammer_and_pick-tecnologias-utilizadas)
+- [:sparkles: Features](#sparkles-features)
+- [:pushpin: A ser adicionado](#pushpin-a-ser-adicionado)
+- [:handshake: Seja um Contribuidor](#handshake-seja-um-contribuidor)
 
 ---
 
-## :hammer: Tecnologias Utilizadas
-Para desenvolver esta aplicação, utilizei as seguintes tecnologias: 
+## :closed_book: Sobre
+
+Dev.finances é uma aplicação que te ajuda a gerenciar seu balanço bancário.
+
+Adicione transações de entrada e saída, e o valor de cada uma delas será exibido, bem como o balanço total entre elas.
+
+---
+
+## :hammer_and_pick: Tecnologias Utilizadas
+
+Para desenvolver esta aplicação, utilizei as seguintes tecnologias:
+
 - HTML
 - SCSS
 - JavaScript
@@ -32,33 +39,26 @@ Para desenvolver esta aplicação, utilizei as seguintes tecnologias:
 ---
 
 ## :sparkles: Features
+
 - Adicionar e remover transações, com valor, data e descrição
-- Visualizar o balanço total 
+- Visualizar o balanço total
 - Responsividade
 
-### :calendar: A ser adicionado
+---
+
+## :pushpin: A ser adicionado
+
 - [ ] Dark Mode
 
 ---
 
 ## :handshake: Seja um contribuidor
+
 Tem alguma ideia que poderia alavancar ainda mais o projeto, e deseja implementar? É simples!
-- Faça um fork do projeto
-- Modifique o que achar necessário 
-- Faça o commit das mudanças
-- Crie um Pull Request
+
+1. Faça um fork do projeto
+2. Modifique o que achar necessário
+3. Faça o commit das mudanças
+4. Crie um Pull Request
 
 ---
-
-## :camera: Screenshots da aplicação
-:computer:  Desktop:
-<img src="./assets/dev-finances-desktop-scrshot.png" maxwidth="100%" style="display: block; margin: auto;"></img>
-
-:iphone: Mobile:
-<img src="./assets/dev-finances-mobile-scrshot.png" maxwidth="100%" style="display: block; margin: auto;"></img>
-
----
-
-## :books: Licença
-Este projeto está sob [licença MIT](https://choosealicense.com/licenses/mit/).
-Clique no link acima ou veja o [LICENSE](./LICENSE) do projeto para mais detalhes.
