@@ -54,18 +54,23 @@ hr {
 /*Links & Buttons ==============================*/
 
 a {
-  color: #49aa26;
+  color: #fff;
   text-decoration: none;
   transition: .2s ease-in-out;
 
-  &:hover {
-    color: #12a454;
-  }
 }
 
  .button.new {
+   background-color: #49aa26;
+   border: none;
+   border-radius: 0.25rem;
+   padding: 0.25rem;
    display: inline-block;
    margin-bottom: .8rem;
+
+   &:hover {
+    background-color: #12a454;
+  }
  }
 
  .input-group .button.cancel {
