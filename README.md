@@ -1,4 +1,4 @@
-# ![Screenshot da aplicação no desktop](./assets/logo.svg)
+# ![Logo](./assets/logo.svg)
 
 ![Autor](https://img.shields.io/badge/author-Wendell%20Kenneddy-brightgreen)
 ![Tecnologias Utilizadas](https://img.shields.io/badge/techs-HTML%2C%20SCSS%2C%20JS-brightgreen)
@@ -6,7 +6,7 @@
 ![Projeto em construção](https://img.shields.io/badge/status-em%20construção-orange)
 ![Licença: MIT](https://img.shields.io/github/license/wendell-kenneddy/agency-dev)
 
-![Screenshot da aplicação no desktop](./assets/dev-finances-desktop-scrshot.png)
+![Screenshot da aplicação no desktop](./assets/final-result.png)
 
 ---
 
