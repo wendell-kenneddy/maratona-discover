@@ -17,18 +17,18 @@
 }
 
 body {
-  background-color: $grayish-black;
+  background-color: #f0f2f5;
   font-family: "Poppins", sans-serif;
 }
 
 h2 {
   margin: 3.2rem 0 0.8rem;
   font-weight: 400;
-  color: #fff;
+  color: #363f5f;
 }
 
 hr {
-  background-color: $red;
+  background-color: #ff2121;
   border: none;
   width: 100%;
   height: 0.1rem;
@@ -54,12 +54,12 @@ hr {
 /*Links & Buttons ==============================*/
 
 a {
-  color: $green;
+  color: #49aa26;
   text-decoration: none;
   transition: .2s ease-in-out;
 
   &:hover {
-    color: $light-green;
+    color: #12a454;
   }
 }
 
@@ -69,13 +69,13 @@ a {
  }
 
  .input-group .button.cancel {
-   border: 2px solid $red;
+   border: 2px solid #ff2121;
    border-radius: 0.2rem;
    height: 50px;
    opacity: 0.6;
    cursor: pointer;
 
-   color: $red;
+   color: #ff2121;
 
    display: flex;
    align-items: center;
@@ -87,7 +87,7 @@ a {
  }
 
  .input-group button {
-   background: $light-green;
+   background: #12a454;
    border: none;
    border-radius: 0.2rem;
    padding: 0rem;
@@ -98,7 +98,7 @@ a {
    color: #fff;
 
    &:hover {
-     background-color: $green;
+     background-color: #49aa26;
    }
  }
 

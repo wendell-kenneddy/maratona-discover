@@ -16,7 +16,7 @@
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
 
-  color: $dark-blue;
+  color: #363f5f;
 
   h3 {
     font-weight: 400;
@@ -32,12 +32,12 @@
   }
 }
 .card.expense {
-  background-color: $red;
+  background-color: #ff2121;
   color: #fff;
 }
 
 .card.total {
-  background-color: $green;
+  background-color: #49aa26;
   color: #fff;
 }
 
@@ -54,7 +54,7 @@
   width: 100%;
   border-spacing: 0 0.5rem;
 
-  color: #fff;
+  color: #363f5f;
 }
 
 table thead tr th:first-child,
@@ -76,7 +76,7 @@ table tbody tr {
 }
 
 table thead th {
-  background-color: #000;
+  background-color: #fff;
   padding: 1rem;
 
   text-align: left;
@@ -84,20 +84,20 @@ table thead th {
 }
 
 table tbody td {
-  background-color: $black;
+  background-color: #fff;
   padding: 1rem;
 
   text-align: left;
 }
 
 td.description {
-  color: #fff;
+  color: #363f5f;
 }
 
 td.income {
-  color: $green;
+  color: #49aa26;
 }
 
 td.expense {
-  color: $red;
+  color: #ff2121;
 }
