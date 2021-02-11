@@ -3,7 +3,7 @@
 ![Autor](https://img.shields.io/badge/author-Wendell%20Kenneddy-brightgreen)
 ![Tecnologias Utilizadas](https://img.shields.io/badge/techs-HTML%2C%20SCSS%2C%20JS-brightgreen)
 ![Pull Requests são aceitos](https://img.shields.io/badge/PRs-welcome-brightgreen)
-![Projeto em construção](https://img.shields.io/badge/status-em%20construção-orange)
+![Projeto concluído](https://img.shields.io/badge/status-concluído-brightgreen)
 ![Licença: MIT](https://img.shields.io/github/license/wendell-kenneddy/agency-dev)
 
 ![Screenshot da aplicação no desktop](./assets/final-result.png)
