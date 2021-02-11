@@ -32,12 +32,22 @@
   }
 }
 .card.expense {
-  background-color: #ff2121;
-  color: #fff;
+  background-color: #fff;
+  color: #363f5f;
 }
 
 .card.total {
+  background-color: #fff;
+  color: #363f5f;
+}
+
+.card.income {
   background-color: #49aa26;
+  color: #fff;
+}
+
+.card.total.expense {
+  background-color: #ff2121;
   color: #fff;
 }
 
