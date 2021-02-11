@@ -15,7 +15,7 @@
 - [:closed_book: Sobre](#closed_book-sobre)
 - [:hammer_and_pick: Tecnologias Utilizadas](#hammer_and_pick-tecnologias-utilizadas)
 - [:sparkles: Features](#sparkles-features)
-- [:pushpin: A ser adicionado](#pushpin-a-ser-adicionado)
+- [:heavy_check_mark: A ser adicionado](#heavy_check_mark-a-ser-adicionado)
 - [:handshake: Seja um Contribuidor](#handshake-seja-um-contribuidor)
 
 ---
@@ -46,11 +46,11 @@ Para desenvolver esta aplicação, utilizei as seguintes tecnologias:
 
 ---
 
-## :pushpin: A ser adicionado
+## :heavy_check_mark: A ser adicionado
 
 - [x] Dark Mode
 - [x] Funcionalidade que altera a cor de fundo do card total de acordo com o valor, sendo vermelho para menor que 0 e verde para maior que 0.
-- [ ] Botão de apagar todas as transações
+- [x] Botão de apagar todas as transações
 
 ---
 
