@@ -69,11 +69,14 @@ const calculateTransactions = {
     total = calculateTransactions.incomes() + calculateTransactions.expenses()
 
     if (total < 0) {
+      document.querySelector('.card.total').classList.remove('income')
       document.querySelector('.card.total').classList.add('expense')
     } else if (total > 0) {
+      document.querySelector('.card.total').classList.remove('expense')
       document.querySelector('.card.total').classList.add('income')
     } else {
-      document.querySelector('.card.total').classList.remove('income') || document.querySelector('.card.total').classList.remove('expense')
+      document.querySelector('.card.total').classList.remove('income')
+      document.querySelector('.card.total').classList.remove('expense')
     }
 
     return total
