@@ -4,6 +4,7 @@ $modal-dark: #161616;
 
 .dark-theme {
   background-color: $body-dark;
+  transition: all 0.8s ease-in-out;
 
   header {
     background-color: $header-dark;
