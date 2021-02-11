@@ -49,6 +49,14 @@ const calculateTransactions = {
     App.reload()
   },
 
+  //Remove ALL transactions
+  removeAll() {
+    this.all.splice(0, this.all.length)
+
+    App.reload()
+    modalToErase.open()
+  },
+
   //Add the value of incomes
   incomes() {
     let income = 0;
