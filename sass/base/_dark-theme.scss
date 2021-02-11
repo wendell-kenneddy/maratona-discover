@@ -10,20 +10,37 @@ $modal-dark: #161616;
     background-color: $header-dark;
   }
 
+  #change-theme {
+    #ball {
+      background-color: #000;
+    }
+  }
+
   .card {
     background-color: #f0f2f5;
 
     &.expense {
-      background-color: #C6282B;
+      background-color: #f0f2f5;
     }
 
     &.total {
-      background-color: #00897B;
+      background-color: #f0f2f5;
+
+      &.expense {
+        background-color: #c6282b;
+        color: #fff;
+      }
+
+      &.income {
+        background-color: #00897b;
+        color: #fff;
+      }
+
     }
   }
 
   .button.new {
-    background-color: #00897B;
+    background-color: #00897b;
 
     &:hover {
       background-color: #03ab9a;
@@ -33,6 +50,14 @@ $modal-dark: #161616;
   table thead th,
   table th td {
     background-color: #f0f2f5;
+  }
+
+  td.income {
+    color: #00897b;
+  }
+
+  td.expense {
+    color: #c6282b;
   }
 
   .modal {
@@ -46,5 +71,19 @@ $modal-dark: #161616;
 
   input {
     background-color: #f0f2f5;
+  }
+
+  .input-group {
+    button {
+      background-color: #00897b;
+
+      &:hover {
+        background-color: #03ab9a;
+      }
+    }
+    .button.cancel {
+      color: #c6282b;
+      border-color: #c6282b;
+    }
   }
 }
