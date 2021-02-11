@@ -49,55 +49,52 @@ h2 {
 a {
   color: #fff;
   text-decoration: none;
-  transition: .2s ease-in-out;
-
+  transition: 0.2s ease-in-out;
 }
 
- .button.new {
-   background-color: #49aa26;
-   border: none;
-   border-radius: 0.25rem;
-   padding: 0.25rem;
-   display: inline-block;
-   margin-bottom: .8rem;
+.button.new {
+  background-color: #49aa26;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.8rem;
 
-   &:hover {
+  &:hover {
     background-color: #12a454;
   }
- }
+}
 
- .input-group .button.cancel {
-   border: 2px solid #ff2121;
-   border-radius: 0.2rem;
-   height: 50px;
-   opacity: 0.6;
-   cursor: pointer;
+.input-group .button.cancel {
+  border: 2px solid #ff2121;
+  border-radius: 0.2rem;
+  height: 50px;
+  opacity: 0.6;
+  cursor: pointer;
 
-   color: #ff2121;
+  color: #ff2121;
 
-   display: flex;
-   align-items: center;
-   justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-   &:hover {
-     opacity: 1;
-   }
- }
+  &:hover {
+    opacity: 1;
+  }
+}
 
- .input-group button {
-   background: #12a454;
-   border: none;
-   border-radius: 0.2rem;
-   padding: 0rem;
-   height: 50px;
-   transition: .3s ease-in-out;
-   cursor: pointer;
+.input-group button {
+  background: #49aa26;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0rem;
+  height: 50px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
 
-   color: #fff;
+  color: #fff;
 
-   &:hover {
-     background-color: #49aa26;
-   }
- }
-
- 
+  &:hover {
+    background-color: #12a454;
+  }
+}
