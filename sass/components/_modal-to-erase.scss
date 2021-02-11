@@ -1,0 +1,84 @@
+.modal-overlay-to-erase {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  z-index: 15
+}
+
+.modal-overlay-to-erase.active {
+  opacity: 1.0;
+  visibility: visible;
+}
+
+.transaction-add-remove {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  #button-remove {
+    background-color: #ff2121;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+    display: inline-block;
+    margin-bottom: 0.8rem;
+
+    &:hover {
+      background-color: #c6282b;
+    }
+  }
+}
+
+.modal {
+  background-color: $background-modal;
+  padding: 2.4rem;
+  z-index: 15;
+  box-shadow: 0 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ask-erase-all {
+  h2 {
+    margin-top: 0;
+  }
+
+  max-width:500px;
+
+}
+
+a.cancel-erase-all {
+  background: #ff2121;
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0rem;
+  height: 50px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #c6282b;
+  }
+}
+
+
+button.confirm-erase-all {
+  background-color: transparent;
+  color: red;
+}
