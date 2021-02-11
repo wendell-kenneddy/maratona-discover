@@ -1,0 +1,49 @@
+$body-dark: #121212;
+$header-dark: #000;
+$modal-dark: #161616;
+
+.dark-theme {
+  background-color: $body-dark;
+
+  header {
+    background-color: $header-dark;
+  }
+
+  .card {
+    background-color: #f0f2f5;
+
+    &.expense {
+      background-color: #C6282B;
+    }
+
+    &.total {
+      background-color: #00897B;
+    }
+  }
+
+  .button.new {
+    background-color: #00897B;
+
+    &:hover {
+      background-color: #03ab9a;
+    }
+  }
+
+  table thead th,
+  table th td {
+    background-color: #f0f2f5;
+  }
+
+  .modal {
+    background-color: $modal-dark;
+
+    h2,
+    small {
+      color: #fff;
+    }
+  }
+
+  input {
+    background-color: #f0f2f5;
+  }
+}
