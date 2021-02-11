@@ -10,6 +10,18 @@ const modal = {
   }
 }
 
+const modalToErase = {
+  open() {
+    //Open  modal
+    //Toggle the active class to the modal
+
+    document
+      .querySelector('.modal-overlay-to-erase')
+      .classList
+      .toggle('active')
+  }
+}
+
 const Storage = {
   get() {
     return JSON.parse(localStorage.getItem("devfinances: transactions")) || []
