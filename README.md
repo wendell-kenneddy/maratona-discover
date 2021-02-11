@@ -48,7 +48,9 @@ Para desenvolver esta aplicação, utilizei as seguintes tecnologias:
 
 ## :pushpin: A ser adicionado
 
-- [ ] Dark Mode
+- [x] Dark Mode
+- [x] Funcionalidade que altera a cor de fundo do card total de acordo com o valor, sendo vermelho para menor que 0 e verde para maior que 0.
+- [ ] Botão de apagar todas as transações
 
 ---
 
