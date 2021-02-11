@@ -80,5 +80,13 @@ a.cancel-erase-all {
 
 button.confirm-erase-all {
   background-color: transparent;
-  color: red;
+  border: 2px solid #49aa26;
+  border-radius: 0.25rem;
+  color: #49aa26;
+  opacity: 0.7;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 1;
+  }
 }
