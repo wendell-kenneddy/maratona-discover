@@ -54,7 +54,7 @@
   width: 100%;
   border-spacing: 0 0.5rem;
 
-  color: #363f5f;
+  color: $data-table-color;
 }
 
 table thead tr th:first-child,
@@ -76,7 +76,7 @@ table tbody tr {
 }
 
 table thead th {
-  background-color: #fff;
+  background-color: $table-th-bg;
   padding: 1rem;
 
   text-align: left;
@@ -84,7 +84,7 @@ table thead th {
 }
 
 table tbody td {
-  background-color: #fff;
+  background-color: $table-td-bg;
   padding: 1rem;
 
   text-align: left;
