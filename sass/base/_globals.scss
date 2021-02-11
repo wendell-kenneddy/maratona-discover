@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: #f0f2f5;
+  background-color: $background-primary;
   font-family: "Poppins", sans-serif;
 }
 
@@ -25,13 +25,6 @@ h2 {
   margin: 3.2rem 0 0.8rem;
   font-weight: 400;
   color: #363f5f;
-}
-
-hr {
-  background-color: #ff2121;
-  border: none;
-  width: 100%;
-  height: 0.1rem;
 }
 
 .sr-only {
