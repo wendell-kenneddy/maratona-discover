@@ -71,12 +71,18 @@ const calculateTransactions = {
     if (total < 0) {
       document.querySelector('.card.total').classList.remove('income')
       document.querySelector('.card.total').classList.add('expense')
+
+      document.getElementById('total-image').src = './assets/total.svg'
     } else if (total > 0) {
       document.querySelector('.card.total').classList.remove('expense')
       document.querySelector('.card.total').classList.add('income')
+
+      document.getElementById('total-image').src = './assets/total.svg'
     } else {
       document.querySelector('.card.total').classList.remove('income')
       document.querySelector('.card.total').classList.remove('expense')
+
+      document.getElementById('total-image').src = './assets/total-base.svg'
     }
 
     return total
