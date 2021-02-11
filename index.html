@@ -30,7 +30,8 @@
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 
   <script src="script.js" type="text/javascript" charset="UTF-8" defer></script>
-  <script src="darkmode.js" type="text/javascript" charset="UTF-8" defer></script>
+  <script src="darkmode.js" type="text/javascript" charset="UTF-8"
+    defer></script>
 
 </head>
 
@@ -71,7 +72,8 @@
       <div class="card total">
         <h3>
           <span>Total</span>
-          <img src="./assets/total-base.svg" alt="Imagem do Total" id="total-image">
+          <img src="./assets/total-base.svg" alt="Imagem do Total"
+            id="total-image">
         </h3>
         <p id="totalDisplay">R$ 0,00</p>
       </div>
@@ -79,8 +81,15 @@
     <section id="transactions">
       <h2 class="sr-only">Transações</h2>
 
-      <a onclick="modal.open()" href="#" class="button new"
-        name="nova=transação">+ Nova Transação</a>
+      <div class="transaction-add-remove">
+
+        <a onclick="modal.open()" href="#" class="button new"
+          name="nova=transação">+ Nova Transação</a>
+
+        <a onclick="modalToErase.open()" href="#" id="button-remove"
+          name="remover-transaçoes">Remover
+          Transações</a>
+      </div>
 
       <table id="data-table" name="tabela-de-dados"
         aria-roledescription="data-table">
@@ -131,6 +140,24 @@
             <button>Confirmar</button>
           </div>
         </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay-to-erase">
+    <div class="modal">
+      <div class="ask-erase-all">
+        <h2>Apagar Transações</h2>
+
+        <p>Este é um processo irreversível. Uma vez removidas, não podem ser
+          recuperadas. Deseja realmente remover todas as transações?</p>
+
+        <div class="input-group actions">
+          <a href="#" onclick="modalToErase.open()"
+            class="button cancel-erase-all">Cancelar</a>
+          <button onclick="calculateTransactions.removeAll()"
+            class="confirm-erase-all">Confirmar</button>
+        </div>
       </div>
     </div>
   </div>
