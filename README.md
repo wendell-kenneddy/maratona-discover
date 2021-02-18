@@ -1,4 +1,4 @@
-# ![Logo](./assets/logo.svg)
+# Dev.finances
 
 ![Autor](https://img.shields.io/badge/author-Wendell%20Kenneddy-brightgreen)
 ![Tecnologias Utilizadas](https://img.shields.io/badge/techs-HTML%2C%20SCSS%2C%20JS-brightgreen)
