@@ -41,6 +41,7 @@ Para desenvolver esta aplicação, utilizei as seguintes tecnologias:
 ## :sparkles: Features
 
 - Adicionar e remover transações, com valor, data e descrição
+- Editar transações
 - Visualizar o balanço total
 - Responsividade
 
