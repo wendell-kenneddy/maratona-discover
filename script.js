@@ -1,12 +1,22 @@
 const modal = {
+  isEdit: false,
+
   open() {
     //Open  modal
     //Add the active class to the modal
-
+    this.isEdit = false;
     document
       .querySelector('.modal-overlay')
       .classList
-      .toggle('active')
+      .add('active')
+  },
+
+  close() {
+    Form.clearFormFields()
+    document
+      .querySelector('.modal-overlay')
+      .classList
+      .remove('active')
   },
 
   openToErase() {
@@ -29,10 +39,17 @@ const Storage = {
 
 const calculateTransactions = {
   all: Storage.get(),
+  underEditionIndex: null,
 
   //Add a new transaction
   add(transaction) {
     calculateTransactions.all.push(transaction)
+
+    App.reload()
+  },
+
+  saveEdit(transaction, index) {
+    calculateTransactions.all[index] = transaction
 
     App.reload()
   },
@@ -129,6 +146,7 @@ const manipulateDOM = {
     <td class="description">${transaction.description}</td>
     <td class="${cssClass}">${amount}</td>
     <td class="date">${transaction.date}</td>
+    <td><img onclick="manipulateDOM.editTransaction(${index})" src="./assets/edit.svg" alt="Remover Transação"></td>
     <td><img onclick="calculateTransactions.remove(${index})" src="./assets/minus.svg" alt="Remover Transação"></td>
     `
 
@@ -146,6 +164,16 @@ const manipulateDOM = {
     document
       .getElementById('totalDisplay')
       .innerHTML = Utils.formatCurrency(calculateTransactions.total())
+  },
+
+  editTransaction(index) {
+    modal.open()
+    modal.isEdit = true;
+    document.querySelector('input#description').value = calculateTransactions.all[index].description
+    document.querySelector('input#amount').value = calculateTransactions.all[index].amount / 100
+    document.querySelector('input#date').value = Utils.reformatDate(calculateTransactions.all[index].date)
+
+    calculateTransactions.underEditionIndex = index;
   },
 
   //Clear table content
@@ -185,6 +213,12 @@ const Utils = {
     const splittedDate = date.split('-')
 
     return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
+  },
+
+  reformatDate(date) {
+    const splittedDate = date.split('/')
+
+    return `${splittedDate[2]}-${splittedDate[1]}-${splittedDate[0]}`
   }
 }
 
@@ -243,10 +277,14 @@ const Form = {
       //Format data
       const transaction = this.formatData()
       //Save data and push to table
-      calculateTransactions.add(transaction)
+
+      modal.isEdit ?
+        calculateTransactions.saveEdit(transaction, calculateTransactions.underEditionIndex)
+        : calculateTransactions.add(transaction)
+
       //Clear form fields
       this.clearFormFields()
-      modal.open()
+      modal.close()
     }
     catch (error) {
       alert(error.message)
