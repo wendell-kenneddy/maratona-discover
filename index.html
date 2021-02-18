@@ -86,7 +86,7 @@
         <a onclick="modal.open()" href="#" class="button new"
           name="nova=transação">+ Nova Transação</a>
 
-        <a onclick="modalToErase.open()" href="#" id="button-remove"
+        <a onclick="modal.openToErase()" href="#" id="button-remove"
           name="remover-transaçoes">Remover
           Transações</a>
       </div>
@@ -98,6 +98,7 @@
             <th>Descrição</th>
             <th>Valor</th>
             <th>Data</th>
+            <th></th>
             <th></th>
           </tr>
         </thead>
@@ -111,7 +112,7 @@
     <div class="modal">
       <div class="form">
         <h2>Nova Transação</h2>
-        <form action="" id="new-transaction" onsubmit="Form.submit(event);">
+        <form action="" id="new-transaction" onsubmit="Form.edit(event);">
 
           <div class="input-group">
             <label for="description" class="sr-only">Descrição</label>
@@ -153,7 +154,7 @@
           recuperadas. Deseja realmente remover todas as transações?</p>
 
         <div class="input-group actions">
-          <a href="#" onclick="modalToErase.open()"
+          <a href="#" onclick="modal.openToErase()"
             class="button cancel-erase-all">Cancelar</a>
           <button onclick="calculateTransactions.removeAll()"
             class="confirm-erase-all">Confirmar</button>

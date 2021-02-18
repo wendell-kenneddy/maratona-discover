@@ -7,14 +7,9 @@ const modal = {
       .querySelector('.modal-overlay')
       .classList
       .toggle('active')
-  }
-}
+  },
 
-const modalToErase = {
-  open() {
-    //Open  modal
-    //Toggle the active class to the modal
-
+  openToErase() {
     document
       .querySelector('.modal-overlay-to-erase')
       .classList
@@ -54,7 +49,7 @@ const calculateTransactions = {
     this.all.splice(0, this.all.length)
 
     App.reload()
-    modalToErase.open()
+    modal.openToErase()
   },
 
   //Add the value of incomes
