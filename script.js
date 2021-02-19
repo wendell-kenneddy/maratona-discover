@@ -1,14 +1,30 @@
 const modal = {
+  titleNew: document.getElementById('title-new-transaction'),
+  titleEdit: document.getElementById('title-edit-transaction'),
   isEdit: false,
 
   open() {
     //Open  modal
     //Add the active class to the modal
     this.isEdit = false;
+    
+    if (this.titleNew.classList.contains('hide')) {
+      this.titleNew.classList.remove('hide')
+      this.titleEdit.classList.add('hide')
+    }
+
     document
       .querySelector('.modal-overlay')
       .classList
       .add('active')
+  },
+
+  openEdit() {
+    this.open()
+    this.isEdit = true;
+
+    this.titleNew.classList.add('hide')
+    this.titleEdit.classList.remove('hide')
   },
 
   close() {
@@ -167,8 +183,8 @@ const manipulateDOM = {
   },
 
   editTransaction(index) {
-    modal.open()
-    modal.isEdit = true;
+    modal.openEdit()
+
     document.querySelector('input#description').value = calculateTransactions.all[index].description
     document.querySelector('input#amount').value = calculateTransactions.all[index].amount / 100
     document.querySelector('input#date').value = Utils.reformatDate(calculateTransactions.all[index].date)
