@@ -6,7 +6,7 @@
 ![Projeto concluído](https://img.shields.io/badge/status-concluído-brightgreen)
 ![Licença: MIT](https://img.shields.io/github/license/wendell-kenneddy/agency-dev)
 
-![Screenshot da aplicação no desktop](./assets/final-result.png)
+![Screenshot da aplicação no desktop](./.github/final-result.png)
 
 ---
 
