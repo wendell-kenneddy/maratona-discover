@@ -162,7 +162,7 @@ const manipulateDOM = {
     <td class="description">${transaction.description}</td>
     <td class="${cssClass}">${amount}</td>
     <td class="date">${transaction.date}</td>
-    <td><img onclick="manipulateDOM.editTransaction(${index})" src="./assets/edit.svg" alt="Remover Transação"></td>
+    <td><img onclick="manipulateDOM.editTransaction(${index})" src="./assets/edit.svg" alt="Editar Transação"></td>
     <td><img onclick="calculateTransactions.remove(${index})" src="./assets/minus.svg" alt="Remover Transação"></td>
     `
 
